@@ -5,10 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-    Opa!
+Opa!
 </body>
 <script src="../build/rdlytics.js"></script>
 <script>
     rdlytics.init();
+
+    rdlytics.getUser().then(function (user) {
+        console.log(user);
+        user.contact({email:'email@any.com'}).then(console.log)
+    });
 </script>
 </html>

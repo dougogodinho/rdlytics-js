@@ -7257,5 +7257,10 @@ function User(user_id) {
 
         return api.post('users/' + this.id + '/interactions', {interaction: {location: location}});
     }
+
+    this.contact = function (data) {
+
+        return api.post('users/' + this.id + '/contacts', {contact: data});
+    }
 }
 },{"./api":300}]},{},[2]);
