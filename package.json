@@ -1,0 +1,26 @@
+{
+  "name": "rdlytics-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-dev": "browserify index.js > build/rdlytics.js",
+    "build-min": "browserify index.js | uglifyjs > build/rdlytics.min.js",
+    "watch": "watchify index.js -o build/rdlytics.js",
+    "build": "npm run build-dev && npm run build-min"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estudiogenius/rdlytics-js.git"
+  },
+  "author": "Douglas Godinho <douglas@estudiogenius.com.br> (https://www.linkedin.com/in/douglasgodinho)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/estudiogenius/rdlytics-js/issues"
+  },
+  "homepage": "https://github.com/estudiogenius/rdlytics-js#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.16.0",
+    "please-ajax": "^2.0.2"
+  }
+}
